@@ -9,6 +9,10 @@ from scipy.spatial.distance import cosine
 from keras_vggface.vggface import VGGFace
 from keras_vggface.utils import preprocess_input
 
+filename = "/home/appuser/venv/lib/python3.7/site-packages/keras_vggface/models.py"
+text = open(filename).read()
+open(filename, "w+").write(text.replace('keras.engine.topology', 'tensorflow.keras.utils'))
+
 choice = st.selectbox("Select Option", [
     "Face Detection",
     "Face Detection 2",
