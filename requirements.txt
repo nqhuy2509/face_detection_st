@@ -1,4 +1,4 @@
-Keras
+Keras==2.4.0
 Keras-Applications
 Keras-Preprocessing
 keras-vggface
@@ -10,5 +10,5 @@ pandas
 Pillow
 scipy
 streamlit
-tensorflow-cpu
+tensorflow-cpu==2.2.0
 mtcnn
