@@ -9,9 +9,6 @@ from scipy.spatial.distance import cosine
 from keras_vggface.vggface import VGGFace
 from keras_vggface.utils import preprocess_input
 
-filename = "/home/appuser/venv/lib/python3.7/site-packages/keras_vggface/models.py"
-text = open(filename).read()
-open(filename, "w+").write(text.replace('keras.engine.topology', 'tensorflow.keras.utils'))
 
 choice = st.selectbox("Select Option", [
     "Face Detection",
@@ -107,9 +104,9 @@ def main():
             thresh = 0.5
             score = cosine(embeddings[0], embeddings[1])
             if score <= thresh:
-                st.success(" >face is a match (%.3f <= %.3f) " % (score, thresh))
+                st.success(" >face is a match")
             else:
-                st.error(" >face is NOT a match (%.3f > %.3f)" % (score, thresh))
+                st.error(" >face is NOT a match")
 
 
 if __name__ == "__main__":
