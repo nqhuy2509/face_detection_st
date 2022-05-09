@@ -75,6 +75,11 @@ def main():
             with column2:
                 plt.imshow(face_array)
                 st.pyplot(fig)
+                plt.savefig('face.png')
+                with open('./face.png', 'rb') as file:
+                    st.download_button("Download Face Image",data=file, file_name="face.png",mime='image/png')
+
+
 
     elif choice == "Face Verification":
         column1, column2 = st.columns(2)
