@@ -9,6 +9,7 @@ from scipy.spatial.distance import cosine
 from keras_vggface.vggface import VGGFace
 from keras_vggface.utils import preprocess_input
 
+st.markdown('<h1 style="color:red; font-size:32px;" align="center">DEMO SEMINAR CVCI STREAMLIT</h1>',unsafe_allow_html=True)
 
 choice = st.selectbox("Select Option", [
     "Face Detection",
